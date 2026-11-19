@@ -1,0 +1,1172 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https:; frame-src https://www.google.com; font-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self' https://wa.me;">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>Da Guidobaldo · Ristorante &amp; Wine Bar a Corte Alta, Fossombrone (PU)</title>
+<meta name="description" content="Da Guidobaldo, osteria e wine bar nel giardino del Palazzo Ducale di Corte Alta a Fossombrone: saletta in pietra antica, terrazza panoramica sulla vallata del Metauro, cucina stagionale fatta in casa e vini del territorio. Prenota su WhatsApp.">
+<meta name="theme-color" content="#1D2B24">
+<meta property="og:type" content="restaurant">
+<meta property="og:locale" content="it_IT">
+<meta property="og:title" content="Da Guidobaldo · Corte Alta, Fossombrone">
+<meta property="og:description" content="Saletta in pietra antica, terrazza panoramica sul Metauro, cucina di stagione fatta in casa e calici del territorio.">
+<meta property="og:image" content="img/sala.jpg?v=1">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231D2B24'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='34' text-anchor='middle' fill='%23B48A3E'%3EG%3C/text%3E%3C/svg%3E">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Da Guidobaldo",
+  "description": "Ristorante e wine bar a Corte Alta, nel giardino del Palazzo Ducale di Fossombrone. Cucina stagionale fatta in casa e vini del territorio.",
+  "image": "img/sala.jpg?v=1",
+  "telephone": "+39 377 300 9519",
+  "servesCuisine": ["Marchigiana", "Italiana", "Cucina di stagione"],
+  "acceptsReservations": "True",
+  "paymentAccepted": "Contanti, Carte di credito, Carte di debito, NFC",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Via Federico da Montefeltro s.n. – Corte Alta",
+    "postalCode": "61034",
+    "addressLocality": "Fossombrone",
+    "addressRegion": "PU",
+    "addressCountry": "IT"
+  },
+  "sameAs": ["https://www.instagram.com/da_guidobaldo/"],
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Friday", "opens": "18:00", "closes": "23:30" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "12:00", "closes": "15:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "18:30", "closes": "23:45" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "12:00", "closes": "19:00" }
+  ]
+}
+</script>
+
+<style>
+/* =========================================================
+   DA GUIDOBALDO — Osteria storica & terrazza rinascimentale
+   Design tokens
+   ========================================================= */
+:root{
+  --paper:#F9F6F0;          /* carta pergamena / avorio caldo */
+  --stone:#EFECE6;          /* pietra antica */
+  --stone-deep:#E4DFD5;
+  --forest:#1D2B24;         /* verde salvia scuro / bosco */
+  --forest-soft:#2A3B32;
+  --wine:#7C2D12;           /* bordeaux vino / terracotta */
+  --wine-deep:#5F220D;
+  --gold:#B48A3E;           /* oro antico */
+  --gold-deep:#8A6726;      /* oro per testi piccoli su chiaro (contrasto AA) */
+  --gold-light:#D6B97A;
+  --ink:#2A211B;
+  --ink-soft:#5B4F45;
+  --line:rgba(42,33,27,.14);
+  --line-strong:rgba(42,33,27,.26);
+  --on-dark:#F3EDE2;
+  --on-dark-soft:rgba(243,237,226,.72);
+
+  --serif:"Iowan Old Style","Palatino Linotype","Book Antiqua",Palatino,"Hoefler Text",Garamond,Georgia,"Times New Roman",serif;
+  --sans:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans",Arial,sans-serif;
+
+  --radius:4px;
+  --radius-lg:10px;
+  --shadow:0 1px 2px rgba(42,33,27,.06),0 12px 32px -14px rgba(42,33,27,.28);
+  --shadow-lg:0 30px 60px -30px rgba(29,43,36,.55);
+  --ease:cubic-bezier(.2,.7,.2,1);
+  --wrap:1180px;
+  --pad:clamp(1.15rem,4vw,2.5rem);
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;scroll-padding-top:76px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:var(--sans);font-size:1.0625rem;line-height:1.65;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+  padding-bottom:calc(64px + env(safe-area-inset-bottom));
+}
+@media (min-width:900px){body{padding-bottom:0}}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3,h4{font-family:var(--serif);font-weight:400;line-height:1.12;margin:0;letter-spacing:-.01em;color:var(--ink)}
+p{margin:0 0 1em}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 var(--pad)}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.skip{position:absolute;left:-999px;top:8px;background:var(--forest);color:var(--on-dark);padding:.6rem 1rem;z-index:200;border-radius:var(--radius)}
+.skip:focus{left:8px}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:2px}
+.icon{width:1.15em;height:1.15em;flex:none;stroke:currentColor;fill:none;stroke-width:1.35;stroke-linecap:round;stroke-linejoin:round}
+
+/* Ornamenti */
+.eyebrow{
+  font-family:var(--sans);font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--gold-deep);font-weight:600;margin:0 0 1.1rem;display:flex;align-items:flex-start;gap:.8rem;line-height:1.6
+}
+.eyebrow::before{content:"";width:28px;height:1px;background:var(--gold);flex:none;margin-top:.8em}
+.dark .eyebrow{color:var(--gold-light)}
+.ornament{display:flex;align-items:center;justify-content:center;gap:.9rem;color:var(--gold);margin:0 auto 1.25rem}
+.ornament::before,.ornament::after{content:"";height:1px;width:56px;background:currentColor;opacity:.7}
+.section-title{font-size:clamp(2rem,5.2vw,3.2rem)}
+.section-title em{font-style:italic;color:var(--wine)}
+.dark .section-title em{color:var(--gold-light)}
+.lead{font-size:clamp(1.05rem,2.2vw,1.2rem);color:var(--ink-soft);max-width:60ch}
+.center{text-align:center}
+.center .lead{margin-left:auto;margin-right:auto}
+
+/* Pulsanti */
+.btn{
+  --bg:var(--wine);--fg:var(--paper);--bd:var(--wine);
+  display:inline-flex;align-items:center;justify-content:center;gap:.6rem;
+  min-height:50px;padding:.85rem 1.35rem;border-radius:var(--radius);
+  background:var(--bg);color:var(--fg);border:1px solid var(--bd);
+  font:600 .92rem/1.2 var(--sans);letter-spacing:.03em;text-decoration:none;cursor:pointer;
+  transition:background .25s var(--ease),color .25s var(--ease),border-color .25s var(--ease),transform .25s var(--ease),box-shadow .25s var(--ease);
+}
+.btn:hover{--bg:var(--wine-deep);--bd:var(--wine-deep);transform:translateY(-1px);box-shadow:0 10px 24px -12px rgba(124,45,18,.6)}
+.btn-ghost{--bg:transparent;--fg:var(--ink);--bd:var(--line-strong)}
+.btn-ghost:hover{--bg:var(--ink);--fg:var(--paper);--bd:var(--ink);box-shadow:none}
+.btn-gold{--bg:var(--gold);--fg:var(--forest);--bd:var(--gold)}
+.btn-gold:hover{--bg:var(--gold-light);--bd:var(--gold-light);box-shadow:none}
+.btn-line-light{--bg:transparent;--fg:var(--on-dark);--bd:rgba(243,237,226,.35)}
+.btn-line-light:hover{--bg:var(--on-dark);--fg:var(--forest);--bd:var(--on-dark);box-shadow:none}
+.btn-block{width:100%}
+.btn-text{background:none;border:0;padding:0;color:var(--wine);font:600 .92rem var(--sans);text-decoration:underline;text-underline-offset:4px;cursor:pointer}
+
+/* =================== HEADER =================== */
+.site-header{
+  position:sticky;top:0;z-index:50;
+  background:rgba(249,246,240,.92);backdrop-filter:saturate(1.3) blur(10px);-webkit-backdrop-filter:saturate(1.3) blur(10px);
+  border-bottom:1px solid var(--line);
+}
+.header-inner{display:flex;align-items:center;justify-content:space-between;min-height:68px;gap:1rem}
+.brand{display:flex;align-items:center;gap:.75rem;text-decoration:none}
+.brand-mark{width:38px;height:38px;color:var(--wine)}
+.brand-name{font-family:var(--serif);font-size:1.35rem;line-height:1;display:block}
+.brand-sub{font-size:.58rem;letter-spacing:.16em;white-space:nowrap;text-transform:uppercase;color:var(--ink-soft);display:block;margin-top:.3rem}
+.hide-sm{display:none}
+@media (min-width:480px){.hide-sm{display:inline}.brand-sub{font-size:.62rem;letter-spacing:.24em}}
+.nav{display:none}
+.nav a{font-size:.86rem;letter-spacing:.04em;text-decoration:none;color:var(--ink-soft);padding:.5rem .2rem;position:relative;transition:color .2s}
+.nav a::after{content:"";position:absolute;left:.2rem;right:.2rem;bottom:.2rem;height:1px;background:var(--wine);transform:scaleX(0);transform-origin:left;transition:transform .3s var(--ease)}
+.nav a:hover{color:var(--ink)}
+.nav a:hover::after{transform:scaleX(1)}
+.header-cta{display:none}
+.menu-toggle{display:inline-flex;align-items:center;justify-content:center;width:46px;height:46px;border:1px solid var(--line-strong);border-radius:var(--radius);background:transparent;color:var(--ink);cursor:pointer}
+.menu-toggle .icon{width:22px;height:22px}
+.mobile-nav{display:none;border-top:1px solid var(--line);background:var(--paper)}
+.mobile-nav.open{display:block}
+.mobile-nav ul{list-style:none;margin:0;padding:.5rem var(--pad) 1.25rem}
+.mobile-nav a{display:block;padding:.95rem 0;border-bottom:1px solid var(--line);text-decoration:none;font-family:var(--serif);font-size:1.3rem}
+@media (min-width:900px){
+  .nav{display:flex;gap:1.6rem}
+  .header-cta{display:inline-flex;min-height:42px;padding:.6rem 1.05rem;font-size:.82rem}
+  .menu-toggle,.mobile-nav{display:none!important}
+}
+
+/* =================== HERO =================== */
+.hero{position:relative;padding:clamp(2.25rem,6vw,5rem) 0 clamp(3rem,7vw,6rem);overflow:hidden}
+.hero::before{ /* sottile trama pergamena */
+  content:"";position:absolute;inset:0;pointer-events:none;opacity:.5;
+  background:
+    radial-gradient(120% 80% at 100% 0%,rgba(180,138,62,.10),transparent 60%),
+    radial-gradient(90% 70% at 0% 100%,rgba(124,45,18,.06),transparent 60%);
+}
+.hero-grid{position:relative;display:grid;gap:2.5rem;align-items:center}
+.hero h1{font-size:clamp(2.6rem,8.5vw,5.1rem);line-height:1.02;letter-spacing:-.02em}
+.hero h1 .h1-sub{display:block;font-style:italic;font-size:.44em;line-height:1.28;color:var(--wine);margin-top:.9rem;letter-spacing:-.005em;max-width:24ch}
+.hero .lead{margin:1.5rem 0 2rem;font-style:italic;font-family:var(--serif);font-size:clamp(1.12rem,2.4vw,1.32rem);color:var(--ink-soft)}
+.hero-ctas{display:flex;flex-direction:column;gap:.7rem}
+@media (min-width:560px){.hero-ctas{flex-direction:row;flex-wrap:wrap}.hero-ctas .btn{white-space:nowrap}}
+.hero-facts{display:flex;flex-wrap:wrap;gap:.5rem 1.4rem;margin:2rem 0 0;padding:1.25rem 0 0;border-top:1px solid var(--line);list-style:none;font-size:.86rem;color:var(--ink-soft)}
+.hero-facts li{display:flex;align-items:center;gap:.5rem}
+.hero-facts .icon{color:var(--gold-deep)}
+
+.arch{ /* cornice ad arco rinascimentale */
+  position:relative;margin:0;justify-self:center;width:min(100%,480px);
+}
+.arch-frame{
+  position:relative;aspect-ratio:4/5;border-radius:999px 999px var(--radius-lg) var(--radius-lg);overflow:hidden;
+  background:linear-gradient(160deg,var(--stone-deep),#CFC6B6);box-shadow:var(--shadow-lg);
+}
+.arch-frame img{width:100%;height:100%;object-fit:cover;transition:transform 1.6s var(--ease)}
+.arch:hover .arch-frame img{transform:scale(1.03)}
+.arch::before{content:"";position:absolute;inset:-12px -12px auto -12px;height:calc(100% + 24px);border:1px solid var(--gold);border-radius:999px 999px 14px 14px;opacity:.55;pointer-events:none}
+.arch figcaption{position:absolute;left:50%;bottom:-18px;transform:translateX(-50%);background:var(--forest);color:var(--on-dark);font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;padding:.6rem 1rem;white-space:nowrap;border-radius:var(--radius)}
+@media (min-width:900px){
+  .hero-grid{grid-template-columns:1.15fr .85fr;gap:4.5rem}
+  .arch{justify-self:end}
+}
+
+/* Fallback foto mancante */
+.img-missing{position:relative}
+.img-missing img{opacity:0}
+.img-missing::after{
+  content:attr(data-fallback);position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;padding:1.5rem;
+  font:italic 1rem/1.4 var(--serif);color:var(--ink-soft);
+  background:
+    repeating-linear-gradient(90deg,transparent 0 46px,rgba(42,33,27,.05) 46px 47px),
+    repeating-linear-gradient(0deg,transparent 0 22px,rgba(42,33,27,.05) 22px 23px),
+    linear-gradient(160deg,var(--stone),var(--stone-deep));
+}
+
+/* =================== SEZIONI =================== */
+.section{padding:clamp(4rem,9vw,7rem) 0}
+.bg-stone{background:var(--stone)}
+.bg-paper{background:var(--paper)}
+.dark{background:var(--forest);color:var(--on-dark)}
+.dark h2,.dark h3{color:var(--on-dark)}
+.dark .lead{color:var(--on-dark-soft)}
+.section-head{margin-bottom:clamp(2.25rem,5vw,3.5rem)}
+.section-head .lead{margin-top:1rem}
+
+/* Galleria */
+.gallery{display:grid;gap:1.5rem}
+@media (min-width:760px){.gallery{grid-template-columns:repeat(3,1fr);gap:1.75rem}}
+.g-card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius-lg);overflow:hidden;display:flex;flex-direction:column;transition:transform .4s var(--ease),box-shadow .4s var(--ease)}
+.g-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.g-media{position:relative;display:block;width:100%;padding:0;border:0;background:var(--stone-deep);cursor:zoom-in;aspect-ratio:4/5;overflow:hidden}
+.g-media img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease)}
+.g-card:hover .g-media img{transform:scale(1.05)}
+.g-zoom{position:absolute;right:.8rem;bottom:.8rem;width:40px;height:40px;border-radius:50%;background:rgba(249,246,240,.92);color:var(--ink);display:flex;align-items:center;justify-content:center;z-index:2}
+.g-body{padding:1.4rem 1.4rem 1.6rem}
+.g-num{font:italic .95rem var(--serif);color:var(--gold-deep)}
+.g-body h3{font-size:1.45rem;margin:.35rem 0 .6rem}
+.g-body p{font-size:.95rem;color:var(--ink-soft);margin:0}
+
+/* Lightbox */
+.lightbox{border:0;padding:0;max-width:100vw;max-height:100vh;width:100vw;height:100vh;background:rgba(20,28,24,.96);color:var(--on-dark)}
+.lightbox::backdrop{background:rgba(20,28,24,.9)}
+.lb-inner{position:relative;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:4.5rem 1rem 1.5rem}
+.lb-inner img{max-width:min(1100px,100%);max-height:calc(100vh - 11rem);object-fit:contain;border-radius:var(--radius)}
+.lb-caption{margin-top:1rem;text-align:center;max-width:60ch}
+.lb-caption strong{display:block;font:400 1.35rem var(--serif)}
+.lb-caption span{font-size:.92rem;color:var(--on-dark-soft)}
+.lb-btn{position:absolute;width:48px;height:48px;border-radius:50%;border:1px solid rgba(243,237,226,.3);background:rgba(29,43,36,.6);color:var(--on-dark);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:background .2s}
+.lb-btn:hover{background:var(--gold);color:var(--forest);border-color:var(--gold)}
+.lb-close{top:1rem;right:1rem}
+.lb-prev{left:1rem;top:50%;transform:translateY(-50%)}
+.lb-next{right:1rem;top:50%;transform:translateY(-50%)}
+.lb-btn .icon{width:22px;height:22px}
+
+/* Menù */
+.menu-grid{display:grid;gap:1.5rem}
+@media (min-width:900px){.menu-grid{grid-template-columns:repeat(3,1fr);gap:0}}
+.menu-col{padding:2rem 1.5rem;background:var(--paper);border:1px solid var(--line);border-radius:var(--radius-lg)}
+@media (min-width:900px){
+  .menu-col{border-radius:0;border-left:0;padding:2.5rem 2.25rem}
+  .menu-col:first-child{border-left:1px solid var(--line);border-radius:var(--radius-lg) 0 0 var(--radius-lg)}
+  .menu-col:last-child{border-radius:0 var(--radius-lg) var(--radius-lg) 0}
+}
+.menu-col-head{display:flex;align-items:center;gap:.8rem;margin-bottom:1.5rem;padding-bottom:1.1rem;border-bottom:1px solid var(--line)}
+.menu-col-head .icon{width:28px;height:28px;color:var(--wine)}
+.menu-col-head h3{font-size:1.5rem}
+.dish{padding:.95rem 0;border-bottom:1px dashed var(--line)}
+.dish:last-child{border-bottom:0}
+.dish h4{font-size:1.12rem;line-height:1.35}
+.dish p{margin:.3rem 0 0;font-size:.88rem;color:var(--ink-soft)}
+.tags{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:.55rem}
+.tag{font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;padding:.22rem .55rem;border:1px solid var(--line-strong);border-radius:999px;color:var(--ink-soft)}
+.menu-note{display:flex;gap:.8rem;align-items:flex-start;margin:2rem auto 0;max-width:720px;padding:1.1rem 1.3rem;border-left:2px solid var(--gold);background:rgba(180,138,62,.08);font:italic 1.02rem/1.5 var(--serif);color:var(--ink-soft)}
+.menu-note .icon{color:var(--gold-deep);margin-top:.2rem}
+.menu-actions{display:flex;flex-wrap:wrap;gap:.75rem;justify-content:center;margin-top:2rem}
+
+/* Storia & vini (verde bosco) */
+.story-grid{display:grid;gap:3rem}
+@media (min-width:900px){.story-grid{grid-template-columns:1fr 1fr;gap:5rem;align-items:start}}
+.story-text p{color:var(--on-dark-soft);font-size:1.04rem}
+.story-text p:first-of-type::first-letter{float:left;font-family:var(--serif);font-size:4.2rem;line-height:.82;padding:.35rem .6rem 0 0;color:var(--gold-light)}
+.story-quote{margin:2rem 0 0;padding:1.4rem 0 0;border-top:1px solid rgba(243,237,226,.18);font:italic clamp(1.25rem,2.6vw,1.6rem)/1.4 var(--serif);color:var(--on-dark)}
+.wine-list{list-style:none;margin:0;padding:0;border-top:1px solid rgba(243,237,226,.18)}
+.wine-list li{display:grid;grid-template-columns:auto 1fr;gap:1.1rem;padding:1.35rem 0;border-bottom:1px solid rgba(243,237,226,.18)}
+.wine-list .icon{width:26px;height:26px;color:var(--gold);margin-top:.2rem}
+.wine-list h3{font-size:1.35rem}
+.wine-list p{margin:.25rem 0 0;font-size:.93rem;color:var(--on-dark-soft)}
+.wine-card-title{font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-light);margin:0 0 1rem;font-weight:600}
+
+/* Prenotazione */
+.booking-grid{display:grid;gap:2.5rem}
+@media (min-width:980px){.booking-grid{grid-template-columns:.8fr 1.2fr;gap:4rem;align-items:start}}
+.booking-aside{position:relative}
+@media (min-width:980px){.booking-aside{position:sticky;top:100px}}
+.booking-steps{list-style:none;margin:1.75rem 0 0;padding:0;counter-reset:s}
+.booking-steps li{display:flex;gap:1rem;padding:.85rem 0;border-bottom:1px solid var(--line);font-size:.96rem;color:var(--ink-soft)}
+.booking-steps li::before{counter-increment:s;content:counter(s);flex:none;width:30px;height:30px;border-radius:50%;border:1px solid var(--gold);display:flex;align-items:center;justify-content:center;font:italic 1rem var(--serif);color:var(--gold-deep)}
+.booking-aside .direct{margin-top:1.75rem;font-size:.92rem;color:var(--ink-soft)}
+.booking-aside .direct a{color:var(--wine);font-weight:600}
+
+.form{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius-lg);box-shadow:var(--shadow);padding:clamp(1.25rem,4vw,2.5rem)}
+.step{border:0;margin:0;padding:0 0 2rem;margin-bottom:2rem;border-bottom:1px solid var(--line);min-width:0}
+.step:last-of-type{border-bottom:0;margin-bottom:0;padding-bottom:0}
+.step legend{display:flex;align-items:baseline;gap:.75rem;padding:0;margin-bottom:1.25rem;font-family:var(--serif);font-size:1.45rem;color:var(--ink)}
+.step legend .n{font:italic 1rem var(--serif);color:var(--paper);background:var(--wine);width:30px;height:30px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;flex:none;transform:translateY(-2px)}
+.label{display:block;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;font-weight:600;color:var(--ink-soft);margin:0 0 .55rem}
+.label .opt{text-transform:none;letter-spacing:0;font-weight:400}
+.field{margin-top:1.25rem}
+.row-2{display:grid;gap:1rem}
+@media (min-width:560px){.row-2{grid-template-columns:1fr 1fr}}
+.input,.textarea{
+  width:100%;min-height:50px;padding:.75rem .9rem;border:1px solid var(--line-strong);border-radius:var(--radius);
+  background:#fff;color:var(--ink);font:1rem var(--sans);transition:border-color .2s,box-shadow .2s;appearance:none;-webkit-appearance:none
+}
+.textarea{min-height:92px;resize:vertical;line-height:1.5}
+.input:focus,.textarea:focus{outline:none;border-color:var(--wine);box-shadow:0 0 0 3px rgba(124,45,18,.14)}
+.input[aria-invalid="true"],.textarea[aria-invalid="true"]{border-color:#A12A1A}
+.hint{font-size:.82rem;color:var(--ink-soft);margin:.45rem 0 0}
+.error{font-size:.84rem;color:#A12A1A;margin:.5rem 0 0;display:flex;gap:.4rem;align-items:flex-start}
+.error[hidden]{display:none}
+
+.chips{display:grid;gap:.6rem}
+.chips.slots{grid-template-columns:1fr}
+@media (min-width:560px){.chips.slots{grid-template-columns:1fr 1fr}}
+.chips.guests{grid-template-columns:repeat(5,1fr)}
+.chips.prefs{grid-template-columns:1fr}
+@media (min-width:560px){.chips.prefs{grid-template-columns:1fr 1fr}}
+.chip{position:relative;display:block;cursor:pointer}
+.chip input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
+.chip-ui{display:flex;align-items:center;gap:.75rem;min-height:52px;padding:.75rem .95rem;border:1px solid var(--line-strong);border-radius:var(--radius);background:#fff;transition:border-color .2s,background .2s,color .2s,box-shadow .2s;height:100%}
+.chip-ui .icon{color:var(--gold-deep)}
+.chip-ui strong{display:block;font-weight:600;font-size:.95rem}
+.chip-ui small{display:block;font-size:.8rem;color:var(--ink-soft)}
+.guests .chip-ui{justify-content:center;font:1.2rem var(--serif);padding:.6rem .3rem}
+.chip:hover .chip-ui{border-color:var(--wine)}
+.chip input:focus-visible + .chip-ui{outline:2px solid var(--gold);outline-offset:2px}
+.chip input:checked + .chip-ui{border-color:var(--wine);background:rgba(124,45,18,.06);box-shadow:inset 0 0 0 1px var(--wine)}
+.chip input:checked + .chip-ui .icon{color:var(--wine)}
+.check-dot{width:18px;height:18px;border-radius:50%;border:1px solid var(--line-strong);flex:none;margin-left:auto;display:flex;align-items:center;justify-content:center;transition:all .2s}
+.chip input[type=checkbox] + .chip-ui .check-dot{border-radius:4px}
+.chip input:checked + .chip-ui .check-dot{background:var(--wine);border-color:var(--wine)}
+.chip input:checked + .chip-ui .check-dot::after{content:"";width:5px;height:9px;border:solid var(--paper);border-width:0 1.6px 1.6px 0;transform:rotate(45deg) translate(-1px,-1px)}
+
+.consent{display:flex;gap:.8rem;align-items:flex-start;font-size:.9rem;color:var(--ink-soft);margin-top:1.25rem;cursor:pointer}
+.consent input{width:20px;height:20px;margin:.15rem 0 0;accent-color:var(--wine);flex:none}
+.consent a{color:var(--wine)}
+.submit-wrap{margin-top:1.5rem}
+.btn-wa{min-height:58px;font-size:.98rem}
+.btn-wa .icon{width:22px;height:22px}
+.form-status{margin-top:1rem;padding:1rem 1.1rem;border-radius:var(--radius);font-size:.92rem;background:rgba(29,43,36,.07);border-left:2px solid var(--forest)}
+.form-status[hidden]{display:none}
+.form-status a{color:var(--wine);font-weight:600}
+.form-small{font-size:.8rem;color:var(--ink-soft);margin:.9rem 0 0;text-align:center}
+
+/* Orari & contatti */
+.info-grid{display:grid;gap:1.5rem}
+@media (min-width:900px){.info-grid{grid-template-columns:1fr 1fr;gap:2rem}}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius-lg);padding:clamp(1.5rem,4vw,2.25rem)}
+.bg-paper .card{background:#fff}
+.card h3{font-size:1.6rem;display:flex;align-items:center;gap:.7rem}
+.card h3 .icon{color:var(--wine);width:26px;height:26px}
+.status{display:inline-flex;align-items:center;gap:.5rem;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;font-weight:600;padding:.35rem .7rem;border-radius:999px;margin:1rem 0 .5rem;background:var(--stone);color:var(--ink-soft)}
+.status::before{content:"";width:8px;height:8px;border-radius:50%;background:currentColor}
+.status.is-open{background:rgba(46,110,70,.12);color:#2E6E46}
+.status.is-closed{background:rgba(124,45,18,.09);color:var(--wine)}
+.hours{list-style:none;margin:.75rem 0 0;padding:0}
+.hours li{display:flex;justify-content:space-between;gap:1rem;padding:.85rem 0;border-bottom:1px solid var(--line);font-size:.98rem}
+.hours li:last-child{border-bottom:0}
+.hours .d{font-family:var(--serif);font-size:1.12rem}
+.hours .t{text-align:right;color:var(--ink-soft)}
+.hours .closed .t{font-style:italic;font-size:.9rem;max-width:22ch}
+.hours li.today{background:linear-gradient(90deg,rgba(180,138,62,.14),transparent);margin:0 -.75rem;padding-left:.75rem;padding-right:.75rem;border-radius:var(--radius)}
+.hours li.today .d::after{content:"oggi";font:600 .62rem var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--gold-deep);margin-left:.6rem;vertical-align:middle}
+.hours-note{font-size:.84rem;color:var(--ink-soft);margin:1rem 0 0}
+.contact-list{list-style:none;margin:1.25rem 0 0;padding:0}
+.contact-list li{display:flex;gap:.9rem;padding:.8rem 0;border-bottom:1px solid var(--line);align-items:flex-start}
+.contact-list li:last-child{border-bottom:0}
+.contact-list .icon{width:22px;height:22px;color:var(--gold-deep);margin-top:.15rem}
+.contact-list a{color:var(--ink);font-weight:600;text-decoration-color:var(--gold);text-underline-offset:4px}
+.contact-list small{display:block;color:var(--ink-soft);font-size:.84rem}
+.services{display:grid;grid-template-columns:repeat(2,1fr);gap:.6rem;margin-top:1.25rem}
+.service{display:flex;gap:.55rem;align-items:center;font-size:.86rem;color:var(--ink-soft);padding:.7rem .8rem;border:1px solid var(--line);border-radius:var(--radius);background:var(--paper)}
+.service .icon{color:var(--wine);width:20px;height:20px}
+
+.map-card{margin-top:2rem;border-radius:var(--radius-lg);overflow:hidden;border:1px solid var(--line);background:var(--stone)}
+.map-ph{position:relative;min-height:340px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:1rem;padding:2rem;
+  background:
+    radial-gradient(circle at 30% 40%,rgba(180,138,62,.18),transparent 45%),
+    repeating-linear-gradient(35deg,transparent 0 38px,rgba(42,33,27,.05) 38px 39px),
+    repeating-linear-gradient(-55deg,transparent 0 54px,rgba(42,33,27,.04) 54px 55px),
+    var(--stone)}
+.map-ph .pin{width:54px;height:54px;border-radius:50%;background:var(--wine);color:var(--paper);display:flex;align-items:center;justify-content:center;box-shadow:0 10px 24px -10px rgba(124,45,18,.7)}
+.map-ph .pin .icon{width:26px;height:26px}
+.map-ph h3{font-size:1.4rem}
+.map-ph p{font-size:.88rem;color:var(--ink-soft);max-width:48ch;margin:0}
+.map-ph .actions{display:flex;flex-wrap:wrap;gap:.6rem;justify-content:center}
+.map-card iframe{display:block;width:100%;height:420px;border:0}
+.map-bar{display:flex;flex-wrap:wrap;gap:.75rem;justify-content:space-between;align-items:center;padding:1rem 1.25rem;background:var(--paper);border-top:1px solid var(--line);font-size:.9rem}
+
+/* Privacy */
+.privacy{max-width:860px;margin:0 auto}
+.privacy details{border:1px solid var(--line);border-radius:var(--radius-lg);background:var(--paper);margin-top:.75rem}
+.privacy summary{cursor:pointer;list-style:none;padding:1.15rem 1.35rem;display:flex;justify-content:space-between;align-items:center;gap:1rem;font-family:var(--serif);font-size:1.2rem}
+.privacy summary::-webkit-details-marker{display:none}
+.privacy summary .icon{transition:transform .3s var(--ease);color:var(--gold-deep)}
+.privacy details[open] summary .icon{transform:rotate(180deg)}
+.privacy .pbody{padding:0 1.35rem 1.35rem;font-size:.94rem;color:var(--ink-soft)}
+.privacy .pbody ul{padding-left:1.15rem;margin:.5rem 0 1rem}
+.privacy .pbody li{margin:.3rem 0}
+.privacy .pbody strong{color:var(--ink)}
+.privacy-badges{display:flex;flex-wrap:wrap;gap:.6rem;justify-content:center;margin:0 0 1.5rem}
+.pbadge{display:inline-flex;gap:.5rem;align-items:center;font-size:.82rem;padding:.5rem .85rem;border-radius:999px;background:var(--paper);border:1px solid var(--line);color:var(--ink-soft)}
+.pbadge .icon{color:var(--forest)}
+
+/* Footer */
+.site-footer{background:var(--forest);color:var(--on-dark-soft);padding:4rem 0 2rem;font-size:.92rem}
+.footer-grid{display:grid;gap:2rem}
+@media (min-width:800px){.footer-grid{grid-template-columns:1.3fr 1fr 1fr}}
+.site-footer .brand-name{color:var(--on-dark);font-size:1.7rem}
+.site-footer .brand-sub{color:var(--gold-light)}
+.site-footer h4{font:600 .72rem var(--sans);letter-spacing:.22em;text-transform:uppercase;color:var(--gold-light);margin:0 0 1rem}
+.site-footer ul{list-style:none;margin:0;padding:0}
+.site-footer li{margin:.4rem 0}
+.site-footer a{color:var(--on-dark);text-decoration:none}
+.site-footer a:hover{color:var(--gold-light)}
+.footer-bottom{margin-top:3rem;padding-top:1.5rem;border-top:1px solid rgba(243,237,226,.14);display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem;font-size:.8rem}
+
+/* Barra mobile */
+.mobile-bar{position:fixed;left:0;right:0;bottom:0;z-index:60;display:grid;grid-template-columns:1fr 1.4fr;gap:.5rem;padding:.55rem .6rem calc(.55rem + env(safe-area-inset-bottom));background:rgba(29,43,36,.97);border-top:1px solid rgba(180,138,62,.35)}
+.mobile-bar .btn{min-height:48px;font-size:.88rem;white-space:nowrap;padding:.7rem .8rem}
+@media (min-width:900px){.mobile-bar{display:none}}
+
+/* Reveal */
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+.no-js .reveal{opacity:1;transform:none}
+</style>
+</head>
+<body class="no-js">
+<a class="skip" href="#main">Vai al contenuto</a>
+
+<!-- Icone SVG (sprite) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="i-mark" viewBox="0 0 40 40"><path d="M6 36V18a14 14 0 0 1 28 0v18" /><path d="M12 36V19a8 8 0 0 1 16 0v17"/><path d="M3 36h34"/><path d="M20 4v3"/></symbol>
+    <symbol id="i-wa" viewBox="0 0 24 24"><path d="M3.5 20.5l1.2-4.1A8.5 8.5 0 1 1 8 19.6z"/><path d="M9 8.6c.2-.5.5-.6.8-.6h.5c.2 0 .4.1.5.4l.7 1.6c.1.3 0 .5-.1.7l-.5.6c.6 1.2 1.6 2.2 2.8 2.8l.6-.5c.2-.2.4-.2.7-.1l1.6.7c.3.1.4.3.4.5v.5c0 .3-.1.6-.6.8-.6.3-1.6.4-3.1-.3a9 9 0 0 1-4-4c-.7-1.5-.6-2.5-.3-3.1z"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 3.5h3l1.5 4-2 1.3a11 11 0 0 0 7.7 7.7l1.3-2 4 1.5v3a2 2 0 0 1-2 2A16.5 16.5 0 0 1 3 5.5a2 2 0 0 1 2-2z"/></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 4.5h6a2 2 0 0 1 2 2V20a1.5 1.5 0 0 0-1.5-1.5H4z"/><path d="M20 4.5h-6a2 2 0 0 0-2 2V20a1.5 1.5 0 0 1 1.5-1.5H20z"/></symbol>
+    <symbol id="i-cal" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5" rx="1.5"/><path d="M3.5 9.5h17M8 3v4M16 3v4"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8.5" r="3.2"/><path d="M3 19.5a6 6 0 0 1 12 0"/><path d="M15.5 5.6a3.2 3.2 0 0 1 0 5.8M18 14.2a6 6 0 0 1 3 5.3"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-6.5-6-6.5-11a6.5 6.5 0 0 1 13 0C18.5 15 12 21 12 21z"/><circle cx="12" cy="10" r="2.3"/></symbol>
+    <symbol id="i-ig" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="4.5"/><circle cx="12" cy="12" r="3.8"/><circle cx="17.2" cy="6.8" r=".6"/></symbol>
+    <symbol id="i-car" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="2"/><path d="M9.5 16.5v-9h3.2a2.6 2.6 0 0 1 0 5.2H9.5"/></symbol>
+    <symbol id="i-dog" viewBox="0 0 24 24"><path d="M10 5.5 7.5 4 5 7.5l1.5 2"/><path d="M14 5.5 16.5 4 19 7.5l-1.5 2"/><path d="M6.5 9.5c0 5 2.3 9 5.5 9s5.5-4 5.5-9c0-2.5-2.5-4-5.5-4s-5.5 1.5-5.5 4z"/><path d="M10 11h.01M14 11h.01M11 14.5h2l-1 1z"/></symbol>
+    <symbol id="i-card" viewBox="0 0 24 24"><rect x="2.5" y="5.5" width="14" height="10" rx="1.5"/><path d="M2.5 9h14"/><path d="M19 9.5a4 4 0 0 1 0 5M21 7.5a7 7 0 0 1 0 9"/></symbol>
+    <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M5 19c0-8 5-13.5 14.5-14-.3 9.5-6 14.5-14 14z"/><path d="M5 19l7.5-7.5"/></symbol>
+    <symbol id="i-glass" viewBox="0 0 24 24"><path d="M7.5 3h9l-.6 5a3.9 3.9 0 0 1-7.8 0z"/><path d="M12 12v8M8.5 20.5h7"/><path d="M7.8 6.5h8.4"/></symbol>
+    <symbol id="i-plate" viewBox="0 0 24 24"><circle cx="12" cy="13" r="7.5"/><circle cx="12" cy="13" r="4"/><path d="M3 4v5M5 4v5M4 9v11M21 4c-1.5 1-2 3-2 5h2v11"/></symbol>
+    <symbol id="i-cake" viewBox="0 0 24 24"><path d="M4 20.5h16v-7a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2z"/><path d="M4 15.5c1.3 1 2.7 1 4 0s2.7-1 4 0 2.7 1 4 0 2.7-1 4 0"/><path d="M12 11.5V8"/><path d="M12 6.2c-.8-.6-.8-1.6 0-2.7.8 1.1.8 2.1 0 2.7z"/></symbol>
+    <symbol id="i-bowl" viewBox="0 0 24 24"><path d="M3.5 11.5h17a8.5 8.5 0 0 1-17 0z"/><path d="M9 20h6"/><path d="M9 8c0-1.5 1.2-1.5 1.2-3M13 8c0-1.5 1.2-1.5 1.2-3"/></symbol>
+    <symbol id="i-chev" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+    <symbol id="i-left" viewBox="0 0 24 24"><path d="m15 5-7 7 7 7"/></symbol>
+    <symbol id="i-right" viewBox="0 0 24 24"><path d="m9 5 7 7-7 7"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h10"/></symbol>
+    <symbol id="i-zoom" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6"/><path d="m15 15 5 5M10.5 8v5M8 10.5h5"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3.5 19 6v5.5c0 4.5-3 7.8-7 9-4-1.2-7-4.5-7-9V6z"/><path d="m9 12 2 2 4-4"/></symbol>
+    <symbol id="i-map" viewBox="0 0 24 24"><path d="M9 4.5 3.5 6.5v13L9 17.5l6 2 5.5-2v-13L15 6.5z"/><path d="M9 4.5v13M15 6.5v13"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><path d="M3 18.5h18"/><path d="M6.5 18.5a5.5 5.5 0 0 1 11 0"/><path d="M12 6v2.5M5 9.5l1.7 1.7M19 9.5l-1.7 1.7"/></symbol>
+    <symbol id="i-stone" viewBox="0 0 24 24"><path d="M4 20V10a8 8 0 0 1 16 0v10"/><path d="M8 20v-9a4 4 0 0 1 8 0v9M2.5 20h19"/></symbol>
+    <symbol id="i-chair" viewBox="0 0 24 24"><path d="M7 3.5h10v8H7z"/><path d="M5.5 11.5h13M8 11.5V21M16 11.5V21M8 16h8"/></symbol>
+    <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 11v5M12 8h.01"/></symbol>
+    <symbol id="i-cookie" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="m6 6 12 12"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="10.5" width="14" height="10" rx="1.5"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5"/></symbol>
+  </defs>
+</svg>
+
+<!-- =================== HEADER =================== -->
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a href="#top" class="brand" aria-label="Da Guidobaldo, torna all'inizio">
+      <svg class="icon brand-mark" aria-hidden="true"><use href="#i-mark"/></svg>
+      <span>
+        <span class="brand-name">Da Guidobaldo</span>
+        <span class="brand-sub">Ristorante &amp; Wine Bar<span class="hide-sm"> · Corte Alta</span></span>
+      </span>
+    </a>
+    <nav class="nav" aria-label="Navigazione principale">
+      <a href="#galleria">Il Locale</a>
+      <a href="#menu">Menù</a>
+      <a href="#storia">Storia &amp; Vini</a>
+      <a href="#orari">Orari &amp; Contatti</a>
+    </nav>
+    <a href="#prenota" class="btn header-cta"><svg class="icon" aria-hidden="true"><use href="#i-wa"/></svg>Prenota</a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Apri il menu di navigazione">
+      <svg class="icon" aria-hidden="true"><use href="#i-menu"/></svg>
+    </button>
+  </div>
+  <nav id="mobile-nav" class="mobile-nav" aria-label="Navigazione mobile">
+    <ul>
+      <li><a href="#galleria">Il Locale</a></li>
+      <li><a href="#menu">Menù &amp; Piatti</a></li>
+      <li><a href="#storia">Storia &amp; Vini</a></li>
+      <li><a href="#prenota">Prenota un Tavolo</a></li>
+      <li><a href="#orari">Orari &amp; Contatti</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="main">
+
+<!-- =================== HERO =================== -->
+<section class="hero" id="top" aria-labelledby="hero-title">
+  <div class="wrap hero-grid">
+    <div class="reveal">
+      <p class="eyebrow">Corte Alta · Fossombrone (PU) · Nel giardino del Palazzo Ducale</p>
+      <h1 id="hero-title">Da Guidobaldo<span class="h1-sub">— Sapori del territorio, storia e terrazza sulla vallata del Metauro.</span></h1>
+      <p class="lead">Una saletta intima tra pietra antica e arredi vintage, una terrazza panoramica sui tetti di Fossombrone, cucina stagionale fatta in casa e calici del territorio.</p>
+      <div class="hero-ctas">
+        <a href="#prenota" class="btn"><svg class="icon" aria-hidden="true"><use href="#i-wa"/></svg>Prenota un Tavolo su WhatsApp</a>
+        <a href="#menu" class="btn btn-ghost"><svg class="icon" aria-hidden="true"><use href="#i-book"/></svg>Scopri il Menù &amp; i Piatti</a>
+        <a href="tel:+393773009519" class="btn btn-ghost"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>Chiama (377 300 9519)</a>
+      </div>
+      <ul class="hero-facts">
+        <li><svg class="icon" aria-hidden="true"><use href="#i-stone"/></svg>Saletta in pietra</li>
+        <li><svg class="icon" aria-hidden="true"><use href="#i-sun"/></svg>Terrazza panoramica</li>
+        <li><svg class="icon" aria-hidden="true"><use href="#i-glass"/></svg>Vini del territorio</li>
+      </ul>
+    </div>
+    <figure class="arch reveal">
+      <div class="arch-frame" data-fallback="La saletta in pietra — img/sala.jpg">
+        <img src="img/sala.jpg?v=1" alt="Saletta interna in pietra antica e arredi vintage Da Guidobaldo Fossombrone" width="960" height="1200" fetchpriority="high" decoding="async">
+      </div>
+      <figcaption>La saletta in pietra</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- =================== GALLERIA =================== -->
+<section class="section bg-stone" id="galleria" aria-labelledby="gal-title">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <div class="ornament" aria-hidden="true"><svg class="icon"><use href="#i-mark"/></svg></div>
+      <h2 class="section-title" id="gal-title">Il locale, <em>così com'è</em></h2>
+      <p class="lead">Tre scorci veri della nostra casa: la sala, la cucina di tradizione, i dolci della settimana. Tocca una foto per ingrandirla.</p>
+    </div>
+    <div class="gallery">
+      <article class="g-card reveal">
+        <button class="g-media" type="button" data-lb="0" data-fallback="img/sala.jpg" aria-label="Ingrandisci: La Saletta in Pietra e Arredi Vintage">
+          <img src="img/sala.jpg?v=1" alt="Saletta interna in pietra antica e arredi vintage Da Guidobaldo Fossombrone" loading="lazy" decoding="async" width="800" height="1000">
+          <span class="g-zoom" aria-hidden="true"><svg class="icon"><use href="#i-zoom"/></svg></span>
+        </button>
+        <div class="g-body">
+          <span class="g-num">I.</span>
+          <h3>La Saletta in Pietra &amp; Arredi Vintage</h3>
+          <p>Atmosfera raccolta e autentica nel cuore storico di Corte Alta, più terrazza panoramica nella bella stagione.</p>
+        </div>
+      </article>
+      <article class="g-card reveal">
+        <button class="g-media" type="button" data-lb="1" data-fallback="img/pollo.jpg" aria-label="Ingrandisci: Arrosti della Tradizione e Cucina di Stagione">
+          <img src="img/pollo.jpg?v=1" alt="Pollo arrosto alle erbe con patate al forno, cucina di stagione Da Guidobaldo" loading="lazy" decoding="async" width="800" height="1000">
+          <span class="g-zoom" aria-hidden="true"><svg class="icon"><use href="#i-zoom"/></svg></span>
+        </button>
+        <div class="g-body">
+          <span class="g-num">II.</span>
+          <h3>Arrosti della Tradizione &amp; Cucina di Stagione</h3>
+          <p>Carni selezionate, erbe aromatiche, pasta fatta in casa e materie prime del Montefeltro.</p>
+        </div>
+      </article>
+      <article class="g-card reveal">
+        <button class="g-media" type="button" data-lb="2" data-fallback="img/dolce.jpg" aria-label="Ingrandisci: Dolci Artigianali Fatti in Casa">
+          <img src="img/dolce.jpg?v=1" alt="Cheesecake artigianale alle amarene fatta in casa Da Guidobaldo" loading="lazy" decoding="async" width="800" height="1000">
+          <span class="g-zoom" aria-hidden="true"><svg class="icon"><use href="#i-zoom"/></svg></span>
+        </button>
+        <div class="g-body">
+          <span class="g-num">III.</span>
+          <h3>Dolci Artigianali Fatti in Casa</h3>
+          <p>Cheesecake alle amarene e dessert della casa preparati ogni settimana.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<dialog class="lightbox" id="lightbox" aria-label="Galleria fotografica">
+  <div class="lb-inner">
+    <button class="lb-btn lb-close" type="button" data-lb-close aria-label="Chiudi"><svg class="icon" aria-hidden="true"><use href="#i-close"/></svg></button>
+    <button class="lb-btn lb-prev" type="button" data-lb-prev aria-label="Foto precedente"><svg class="icon" aria-hidden="true"><use href="#i-left"/></svg></button>
+    <button class="lb-btn lb-next" type="button" data-lb-next aria-label="Foto successiva"><svg class="icon" aria-hidden="true"><use href="#i-right"/></svg></button>
+    <img id="lb-img" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="">
+    <div class="lb-caption" aria-live="polite"><strong id="lb-title"></strong><span id="lb-text"></span></div>
+  </div>
+</dialog>
+
+<!-- =================== MENÙ =================== -->
+<section class="section bg-paper" id="menu" aria-labelledby="menu-title">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <p class="eyebrow" style="justify-content:center">Estratto dal menù</p>
+      <h2 class="section-title" id="menu-title">La cucina <em>di stagione</em></h2>
+      <p class="lead">Pochi piatti, fatti bene: pasta tirata a mano, arrosti della tradizione e prodotti del Montefeltro e della valle del Metauro.</p>
+    </div>
+
+    <div class="menu-grid">
+      <div class="menu-col reveal">
+        <div class="menu-col-head"><svg class="icon" aria-hidden="true"><use href="#i-leaf"/></svg><h3>Antipasti &amp; Sfizi</h3></div>
+        <div class="dish">
+          <h4>Insalata tiepida di coniglio con taccole e pane bruscato al burro alle erbe</h4>
+        </div>
+        <div class="dish">
+          <h4>Scrigno di pasta sfoglia ai funghi di bosco e fonduta di caciotta bio</h4>
+          <div class="tags"><span class="tag">Vegetariano</span></div>
+        </div>
+        <div class="dish">
+          <h4>Taglieri del territorio</h4>
+          <p>Salumi e formaggi del Montefeltro, da condividere con un calice.</p>
+        </div>
+      </div>
+
+      <div class="menu-col reveal">
+        <div class="menu-col-head"><svg class="icon" aria-hidden="true"><use href="#i-bowl"/></svg><h3>Primi &amp; Secondi della Tradizione</h3></div>
+        <div class="dish">
+          <h4>Mezzelune di grano saraceno ripiene di verza e patate, burro e salvia</h4>
+          <div class="tags"><span class="tag">Fatte in casa</span><span class="tag">Vegetariano</span></div>
+        </div>
+        <div class="dish">
+          <h4>Guanciola brasata</h4>
+          <p>Cottura lenta, fondo di cottura e contorno di stagione.</p>
+        </div>
+        <div class="dish">
+          <h4>Pollo / galletto arrosto alle erbe con patate al forno</h4>
+        </div>
+        <div class="dish">
+          <h4>Opzioni vegetariane e senza glutine</h4>
+          <p>Chiedici al momento della prenotazione: prepariamo volentieri alternative.</p>
+        </div>
+      </div>
+
+      <div class="menu-col reveal">
+        <div class="menu-col-head"><svg class="icon" aria-hidden="true"><use href="#i-cake"/></svg><h3>I Dolci &amp; La Cantina</h3></div>
+        <div class="dish">
+          <h4>Cheesecake artigianale alle amarene</h4>
+          <div class="tags"><span class="tag">Fatta in casa</span></div>
+        </div>
+        <div class="dish">
+          <h4>Dessert della casa</h4>
+          <p>Preparati ogni settimana, secondo la stagione.</p>
+        </div>
+        <div class="dish">
+          <h4>Vini locali al calice e in bottiglia</h4>
+          <p>Bianchello del Metauro, Sangiovese, bollicine Metodo Martinotti e vini naturali.</p>
+        </div>
+      </div>
+    </div>
+
+    <p class="menu-note reveal"><svg class="icon" aria-hidden="true"><use href="#i-info"/></svg><span>Il menù cambia secondo la stagione e la disponibilità fresca del giorno. Per allergie e intolleranze chiedi pure al personale.</span></p>
+    <div class="menu-actions reveal">
+      <a href="#prenota" class="btn"><svg class="icon" aria-hidden="true"><use href="#i-wa"/></svg>Prenota un Tavolo</a>
+      <a href="https://www.instagram.com/da_guidobaldo/" class="btn btn-ghost" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="#i-ig"/></svg>Piatti del giorno su Instagram</a>
+    </div>
+  </div>
+</section>
+
+<!-- =================== STORIA & VINI =================== -->
+<section class="section dark" id="storia" aria-labelledby="storia-title">
+  <div class="wrap story-grid">
+    <div class="story-text reveal">
+      <p class="eyebrow">Storia &amp; Vini</p>
+      <h2 class="section-title" id="storia-title">Tra le pietre <em>di Corte Alta</em></h2>
+      <div style="height:1.5rem"></div>
+      <p>Siamo nel cuore storico di Fossombrone, a Corte Alta, nel giardino del Palazzo Ducale: un luogo che porta ancora i segni del Rinascimento e dei signori di Montefeltro. Da qui la città scende verso il fiume e lo sguardo si apre sulla vallata del Metauro.</p>
+      <p>Dentro, una saletta raccolta tra muri in pietra antica e arredi vintage; fuori, nella bella stagione, una terrazza panoramica sui tetti del borgo. In tavola, una cucina che segue il calendario: ciò che offre il territorio, lavorato in casa.</p>
+      <p class="story-quote">«Un calice, un piatto fatto a mano e la vallata davanti: è tutto quello che serve.»</p>
+    </div>
+    <div class="reveal">
+      <p class="wine-card-title">La cantina</p>
+      <ul class="wine-list">
+        <li><svg class="icon" aria-hidden="true"><use href="#i-glass"/></svg><div><h3>Bianchello del Metauro</h3><p>Il bianco della nostra valle: fresco, sapido, perfetto con antipasti e primi.</p></div></li>
+        <li><svg class="icon" aria-hidden="true"><use href="#i-glass"/></svg><div><h3>Sangiovese</h3><p>Rossi marchigiani per arrosti, brasati e taglieri.</p></div></li>
+        <li><svg class="icon" aria-hidden="true"><use href="#i-glass"/></svg><div><h3>Bollicine Metodo Martinotti</h3><p>Per l'aperitivo in terrazza al tramonto.</p></div></li>
+        <li><svg class="icon" aria-hidden="true"><use href="#i-leaf"/></svg><div><h3>Vini naturali</h3><p>Piccole cantine e vignaioli del territorio, da scoprire al calice.</p></div></li>
+      </ul>
+      <div style="margin-top:2rem;display:flex;flex-wrap:wrap;gap:.7rem">
+        <a href="#prenota" class="btn btn-gold"><svg class="icon" aria-hidden="true"><use href="#i-wa"/></svg>Prenota un Tavolo</a>
+        <a href="tel:+393773009519" class="btn btn-line-light"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>377 300 9519</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== PRENOTA =================== -->
+<section class="section bg-stone" id="prenota" aria-labelledby="prenota-title">
+  <div class="wrap booking-grid">
+    <div class="booking-aside reveal">
+      <p class="eyebrow">Prenotazione</p>
+      <h2 class="section-title" id="prenota-title">Prenota il tuo <em>tavolo</em></h2>
+      <p class="lead" style="margin-top:1rem">Compila i tre passi: prepariamo per te il messaggio da inviare su WhatsApp. Ti risponderemo per confermare.</p>
+      <ol class="booking-steps">
+        <li>Scegli il turno, la data e l'orario che preferisci.</li>
+        <li>Indica quanti siete ed eventuali preferenze.</li>
+        <li>Scrivi il tuo nome e invia la richiesta su WhatsApp.</li>
+      </ol>
+      <p class="direct">Preferisci parlarci? Chiama il <a href="tel:+393773009519">377 300 9519</a>.</p>
+    </div>
+
+    <form class="form reveal" id="booking-form" novalidate>
+      <!-- PASSO 1 -->
+      <fieldset class="step">
+        <legend><span class="n">1</span>Quando vuoi venire</legend>
+        <span class="label" id="slot-label">Turno</span>
+        <div class="chips slots" role="radiogroup" aria-labelledby="slot-label">
+          <label class="chip"><input type="radio" name="slot" value="fri-dinner" data-dow="5" data-from="18:00" data-to="23:30" data-label="Venerdì Cena (18:00 – 23:30)" data-default="20:00"><span class="chip-ui"><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg><span><strong>Venerdì Cena</strong><small>18:00 – 23:30</small></span><span class="check-dot"></span></span></label>
+          <label class="chip"><input type="radio" name="slot" value="sat-lunch" data-dow="6" data-from="12:00" data-to="15:00" data-label="Sabato Pranzo (12:00 – 15:00)" data-default="13:00"><span class="chip-ui"><svg class="icon" aria-hidden="true"><use href="#i-sun"/></svg><span><strong>Sabato Pranzo</strong><small>12:00 – 15:00</small></span><span class="check-dot"></span></span></label>
+          <label class="chip"><input type="radio" name="slot" value="sat-dinner" data-dow="6" data-from="18:30" data-to="23:45" data-label="Sabato Cena (18:30 – 23:45)" data-default="20:30"><span class="chip-ui"><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg><span><strong>Sabato Cena</strong><small>18:30 – 23:45</small></span><span class="check-dot"></span></span></label>
+          <label class="chip"><input type="radio" name="slot" value="sun-lunch" data-dow="0" data-from="12:00" data-to="19:00" data-label="Domenica Pranzo (12:00 – 19:00)" data-default="13:00"><span class="chip-ui"><svg class="icon" aria-hidden="true"><use href="#i-sun"/></svg><span><strong>Domenica Pranzo</strong><small>12:00 – 19:00</small></span><span class="check-dot"></span></span></label>
+        </div>
+        <p class="error" id="err-slot" hidden></p>
+        <div class="row-2 field">
+          <div>
+            <label class="label" for="date">Data</label>
+            <input class="input" type="date" id="date" name="date" required aria-describedby="err-date date-hint">
+            <p class="hint" id="date-hint">Scegliendo il turno proponiamo la prima data utile.</p>
+            <p class="error" id="err-date" hidden></p>
+          </div>
+          <div>
+            <label class="label" for="time">Orario preferito</label>
+            <input class="input" type="time" id="time" name="time" step="900" required aria-describedby="err-time">
+            <p class="error" id="err-time" hidden></p>
+          </div>
+        </div>
+      </fieldset>
+
+      <!-- PASSO 2 -->
+      <fieldset class="step">
+        <legend><span class="n">2</span>Ospiti &amp; preferenze</legend>
+        <span class="label" id="guests-label">Numero di persone</span>
+        <div class="chips guests" role="radiogroup" aria-labelledby="guests-label">
+          <label class="chip"><input type="radio" name="guests" value="2" checked><span class="chip-ui">2</span></label>
+          <label class="chip"><input type="radio" name="guests" value="3"><span class="chip-ui">3</span></label>
+          <label class="chip"><input type="radio" name="guests" value="4"><span class="chip-ui">4</span></label>
+          <label class="chip"><input type="radio" name="guests" value="5"><span class="chip-ui">5</span></label>
+          <label class="chip"><input type="radio" name="guests" value="6+"><span class="chip-ui">6+</span></label>
+        </div>
+        <div class="field" id="guests-more-wrap" hidden>
+          <label class="label" for="guests-more">Quanti siete esattamente? <span class="opt">(facoltativo)</span></label>
+          <input class="input" type="number" id="guests-more" name="guestsMore" min="6" max="40" inputmode="numeric" placeholder="Es. 8">
+        </div>
+
+        <span class="label field" id="pref-label" style="margin-top:1.5rem">Preferenze <span class="opt">(facoltative, anche più di una)</span></span>
+        <div class="chips prefs" role="group" aria-labelledby="pref-label">
+          <label class="chip"><input type="checkbox" name="pref" value="Saletta interna in pietra"><span class="chip-ui"><svg class="icon" aria-hidden="true"><use href="#i-stone"/></svg><strong>Saletta interna in pietra</strong><span class="check-dot"></span></span></label>
+          <label class="chip"><input type="checkbox" name="pref" value="Terrazza panoramica (stagionale)"><span class="chip-ui"><svg class="icon" aria-hidden="true"><use href="#i-sun"/></svg><strong>Terrazza panoramica <small style="display:inline">(stagionale)</small></strong><span class="check-dot"></span></span></label>
+          <label class="chip"><input type="checkbox" name="pref" value="Cani al seguito / Seggiolone"><span class="chip-ui"><svg class="icon" aria-hidden="true"><use href="#i-dog"/></svg><strong>Cani al seguito / Seggiolone</strong><span class="check-dot"></span></span></label>
+          <label class="chip"><input type="checkbox" name="pref" value="Segnalazione intolleranze / vegetariano" id="pref-diet"><span class="chip-ui"><svg class="icon" aria-hidden="true"><use href="#i-leaf"/></svg><strong>Intolleranze / vegetariano</strong><span class="check-dot"></span></span></label>
+        </div>
+        <div class="field" id="diet-wrap" hidden>
+          <label class="label" for="diet">Specifica intolleranze o esigenze</label>
+          <textarea class="textarea" id="diet" name="diet" maxlength="300" placeholder="Es. 1 celiaco, 1 vegetariano"></textarea>
+        </div>
+      </fieldset>
+
+      <!-- PASSO 3 -->
+      <fieldset class="step">
+        <legend><span class="n">3</span>Nome &amp; invio diretto</legend>
+        <label class="label" for="name">Nome e cognome</label>
+        <input class="input" type="text" id="name" name="name" autocomplete="name" maxlength="80" required aria-describedby="err-name" placeholder="Es. Giulia Rossi">
+        <p class="error" id="err-name" hidden></p>
+        <div class="field">
+          <label class="label" for="notes">Note <span class="opt">(facoltative)</span></label>
+          <textarea class="textarea" id="notes" name="notes" maxlength="400" placeholder="Es. compleanno, arriviamo un po' più tardi…"></textarea>
+        </div>
+        <label class="consent">
+          <input type="checkbox" id="privacy" name="privacy" required aria-describedby="err-privacy">
+          <span>Ho letto l'<a href="#privacy-info">informativa privacy</a> e acconsento all'uso dei dati inseriti per preparare e inviare la richiesta di prenotazione tramite WhatsApp.</span>
+        </label>
+        <p class="error" id="err-privacy" hidden></p>
+        <div class="submit-wrap">
+          <button type="submit" class="btn btn-block btn-wa"><svg class="icon" aria-hidden="true"><use href="#i-wa"/></svg>Invia Richiesta Tavolo su WhatsApp (377 300 9519)</button>
+          <p class="form-small"><svg class="icon" aria-hidden="true" style="vertical-align:-3px"><use href="#i-lock"/></svg> Nessun dato viene salvato su questo sito: il messaggio si prepara sul tuo dispositivo.</p>
+        </div>
+        <div class="form-status" id="form-status" role="status" hidden></div>
+      </fieldset>
+    </form>
+  </div>
+</section>
+
+<!-- =================== ORARI & CONTATTI =================== -->
+<section class="section bg-paper" id="orari" aria-labelledby="orari-title">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <p class="eyebrow" style="justify-content:center">Orari &amp; contatti</p>
+      <h2 class="section-title" id="orari-title">Ti aspettiamo <em>a Corte Alta</em></h2>
+    </div>
+
+    <div class="info-grid">
+      <div class="card reveal">
+        <h3><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg>Orari stagionali</h3>
+        <span class="status" id="open-status">Orari</span>
+        <!-- Per aggiornare gli orari modifica qui: data-dow (0=dom … 6=sab) e data-ranges ("HH:MM-HH:MM,HH:MM-HH:MM") -->
+        <ul class="hours" id="hours">
+          <li class="closed" data-dow="1,2,3,4" data-ranges=""><span class="d">Lunedì – Giovedì</span><span class="t">Chiuso (aperture straordinarie sui canali social)</span></li>
+          <li data-dow="5" data-ranges="18:00-23:30"><span class="d">Venerdì</span><span class="t">18:00 – 23:30</span></li>
+          <li data-dow="6" data-ranges="12:00-15:00,18:30-23:45"><span class="d">Sabato</span><span class="t">12:00 – 15:00 · 18:30 – 23:45</span></li>
+          <li data-dow="0" data-ranges="12:00-19:00"><span class="d">Domenica</span><span class="t">12:00 – 19:00</span></li>
+        </ul>
+        <p class="hours-note">Gli orari possono variare con la stagione: aggiornamenti e aperture straordinarie su <a href="https://www.instagram.com/da_guidobaldo/" target="_blank" rel="noopener noreferrer">@da_guidobaldo</a>.</p>
+      </div>
+
+      <div class="card reveal">
+        <h3><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg>Contatti &amp; servizi</h3>
+        <ul class="contact-list">
+          <li><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg><div><address style="font-style:normal">Via Federico da Montefeltro s.n. – Corte Alta<br><strong>61034 Fossombrone (PU)</strong></address><small>Nel giardino del Palazzo Ducale</small></div></li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg><div><a href="tel:+393773009519">377 300 9519</a><small>Telefono &amp; WhatsApp</small></div></li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-wa"/></svg><div><a href="https://wa.me/393773009519" target="_blank" rel="noopener noreferrer">Scrivici su WhatsApp</a><small>Per prenotazioni e informazioni</small></div></li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-ig"/></svg><div><a href="https://www.instagram.com/da_guidobaldo/" target="_blank" rel="noopener noreferrer">@da_guidobaldo</a><small>Piatti del giorno ed eventi</small></div></li>
+        </ul>
+        <div class="services">
+          <span class="service"><svg class="icon" aria-hidden="true"><use href="#i-car"/></svg>Parcheggio gratuito vicino</span>
+          <span class="service"><svg class="icon" aria-hidden="true"><use href="#i-dog"/></svg>Cani ammessi</span>
+          <span class="service"><svg class="icon" aria-hidden="true"><use href="#i-card"/></svg>Carte &amp; NFC</span>
+          <span class="service"><svg class="icon" aria-hidden="true"><use href="#i-sun"/></svg>Terrazza stagionale</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="map-card reveal" id="mappa">
+      <div class="map-ph" id="map-ph">
+        <span class="pin" aria-hidden="true"><svg class="icon"><use href="#i-pin"/></svg></span>
+        <h3>Corte Alta, Fossombrone</h3>
+        <p>Per rispettare la tua privacy la mappa di Google si carica solo se lo chiedi. Caricandola, Google potrebbe impostare propri cookie.</p>
+        <div class="actions">
+          <button type="button" class="btn" id="load-map"><svg class="icon" aria-hidden="true"><use href="#i-map"/></svg>Carica la mappa</button>
+          <a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&amp;query=Da%20Guidobaldo%20Corte%20Alta%20Fossombrone%20PU" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg>Apri su Google Maps</a>
+        </div>
+      </div>
+      <div class="map-bar">
+        <span>Via Federico da Montefeltro s.n. – Corte Alta, 61034 Fossombrone (PU)</span>
+        <a class="btn-text" href="https://www.google.com/maps/search/?api=1&amp;query=Da%20Guidobaldo%20Corte%20Alta%20Fossombrone%20PU" target="_blank" rel="noopener noreferrer">Apri su Google Maps</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== PRIVACY =================== -->
+<section class="section bg-stone" id="privacy-info" aria-labelledby="privacy-title">
+  <div class="wrap privacy">
+    <div class="section-head center reveal" style="margin-bottom:1.75rem">
+      <p class="eyebrow" style="justify-content:center">Trasparenza</p>
+      <h2 class="section-title" id="privacy-title">Informativa <em>privacy</em></h2>
+      <p class="lead">Ai sensi degli artt. 13 e 14 del Regolamento (UE) 2016/679 (GDPR).</p>
+    </div>
+    <div class="privacy-badges">
+      <span class="pbadge"><svg class="icon" aria-hidden="true"><use href="#i-cookie"/></svg>Zero cookie di profilazione</span>
+      <span class="pbadge"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg>Nessun dato salvato sul sito</span>
+      <span class="pbadge"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg>Nessun servizio esterno senza consenso</span>
+    </div>
+
+    <details open>
+      <summary>Titolare del trattamento<svg class="icon" aria-hidden="true"><use href="#i-chev"/></svg></summary>
+      <div class="pbody">
+        <p><strong>Da Guidobaldo</strong> – Via Federico da Montefeltro s.n., Corte Alta, 61034 Fossombrone (PU). Contatti: tel./WhatsApp <a href="tel:+393773009519">377 300 9519</a>.</p>
+      </div>
+    </details>
+    <details>
+      <summary>Quali dati e come vengono usati<svg class="icon" aria-hidden="true"><use href="#i-chev"/></svg></summary>
+      <div class="pbody">
+        <p>Il modulo di prenotazione raccoglie: turno, data, orario, numero di ospiti, preferenze, eventuali intolleranze/esigenze alimentari, nome e note.</p>
+        <ul>
+          <li>I dati vengono elaborati <strong>esclusivamente sul tuo dispositivo</strong> (nel browser) per comporre il testo del messaggio. Questo sito <strong>non li invia né li salva</strong> su alcun server e non usa database.</li>
+          <li>I dati ci arrivano solo se <strong>tu decidi di inviare</strong> il messaggio su WhatsApp. Da quel momento li usiamo unicamente per gestire la tua prenotazione.</li>
+          <li>Le informazioni su intolleranze o allergie sono fornite volontariamente e servono solo a prepararti un pasto sicuro.</li>
+        </ul>
+        <p><strong>Base giuridica:</strong> esecuzione di misure precontrattuali richieste dall'interessato (art. 6.1.b GDPR); per eventuali dati relativi alla salute (intolleranze/allergie), il tuo consenso esplicito (art. 9.2.a GDPR).</p>
+        <p><strong>Conservazione:</strong> i messaggi sono conservati nella chat WhatsApp per il tempo necessario a gestire la prenotazione e poi eliminati, salvo obblighi di legge.</p>
+      </div>
+    </details>
+    <details>
+      <summary>WhatsApp e servizi di terze parti<svg class="icon" aria-hidden="true"><use href="#i-chev"/></svg></summary>
+      <div class="pbody">
+        <ul>
+          <li><strong>WhatsApp</strong> (WhatsApp Ireland Ltd., gruppo Meta): inviando il messaggio, i dati vengono trattati anche secondo l'informativa di WhatsApp, in qualità di titolare autonomo.</li>
+          <li><strong>Google Maps</strong> (Google Ireland Ltd.): la mappa <strong>non viene caricata</strong> finché non premi “Carica la mappa”. Solo a quel punto Google può ricevere il tuo indirizzo IP e impostare propri cookie.</li>
+          <li><strong>Instagram</strong>: è un semplice collegamento esterno; nessun contenuto viene incorporato in questa pagina.</li>
+        </ul>
+      </div>
+    </details>
+    <details>
+      <summary>Cookie e sicurezza<svg class="icon" aria-hidden="true"><use href="#i-chev"/></svg></summary>
+      <div class="pbody">
+        <p>Questo sito <strong>non utilizza cookie</strong>, né tecnici né di profilazione, e non usa strumenti di statistica o tracciamento. Font e icone sono interni alla pagina: nessuna richiesta a servizi esterni (CDN) all'apertura.</p>
+        <p>La pagina applica una <em>Content Security Policy</em> restrittiva che consente solo risorse proprie e, su tua richiesta, la mappa di Google.</p>
+      </div>
+    </details>
+    <details>
+      <summary>I tuoi diritti<svg class="icon" aria-hidden="true"><use href="#i-chev"/></svg></summary>
+      <div class="pbody">
+        <p>Puoi chiedere in qualsiasi momento accesso, rettifica, cancellazione, limitazione od opposizione al trattamento dei tuoi dati e la loro portabilità (artt. 15–22 GDPR), oltre a revocare il consenso, scrivendoci al 377 300 9519. Hai inoltre diritto di proporre reclamo al <strong>Garante per la protezione dei dati personali</strong> (www.garanteprivacy.it).</p>
+      </div>
+    </details>
+  </div>
+</section>
+
+</main>
+
+<!-- =================== FOOTER =================== -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <span class="brand-name">Da Guidobaldo</span>
+        <span class="brand-sub">Ristorante &amp; Wine Bar · Corte Alta</span>
+        <p style="margin-top:1.25rem;max-width:36ch">Sapori del territorio, storia e terrazza sulla vallata del Metauro, nel giardino del Palazzo Ducale di Fossombrone.</p>
+      </div>
+      <div>
+        <h4>Dove siamo</h4>
+        <p style="margin:0">Via Federico da Montefeltro s.n.<br>Corte Alta, 61034 Fossombrone (PU)</p>
+      </div>
+      <div>
+        <h4>Contatti</h4>
+        <ul>
+          <li><a href="tel:+393773009519">Tel. 377 300 9519</a></li>
+          <li><a href="https://wa.me/393773009519" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+          <li><a href="https://www.instagram.com/da_guidobaldo/" target="_blank" rel="noopener noreferrer">Instagram @da_guidobaldo</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year">2026</span> Da Guidobaldo · Fossombrone (PU)</span>
+      <a href="#privacy-info">Informativa privacy · Nessun cookie</a>
+    </div>
+  </div>
+</footer>
+
+<!-- Barra rapida mobile -->
+<div class="mobile-bar" role="navigation" aria-label="Azioni rapide">
+  <a href="tel:+393773009519" class="btn btn-line-light"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>Chiama</a>
+  <a href="#prenota" class="btn btn-gold"><svg class="icon" aria-hidden="true"><use href="#i-wa"/></svg>Prenota un tavolo</a>
+</div>
+
+<script>
+(function(){
+  "use strict";
+  var WA_NUMBER = "393773009519";
+  var MAP_EMBED = "https://www.google.com/maps?q=" + encodeURIComponent("Da Guidobaldo, Corte Alta, Via Federico da Montefeltro, 61034 Fossombrone PU") + "&output=embed";
+
+  document.body.classList.remove("no-js");
+  var $ = function(s, c){ return (c || document).querySelector(s); };
+  var $$ = function(s, c){ return Array.prototype.slice.call((c || document).querySelectorAll(s)); };
+
+  /* Anno */
+  var y = $("#year"); if (y) y.textContent = new Date().getFullYear();
+
+  /* Menu mobile */
+  var toggle = $(".menu-toggle"), mnav = $("#mobile-nav");
+  function setNav(open){ mnav.classList.toggle("open", open); toggle.setAttribute("aria-expanded", String(open)); toggle.setAttribute("aria-label", open ? "Chiudi il menu di navigazione" : "Apri il menu di navigazione"); }
+  toggle.addEventListener("click", function(){ setNav(!mnav.classList.contains("open")); });
+  $$("a", mnav).forEach(function(a){ a.addEventListener("click", function(){ setNav(false); }); });
+
+  /* Fallback foto mancanti (finché non carichi le foto in /img) */
+  $$("img").forEach(function(img){
+    var host = img.closest("[data-fallback]");
+    if (!host) return;
+    function fail(){ host.classList.add("img-missing"); }
+    if (img.complete && img.naturalWidth === 0) fail();
+    img.addEventListener("error", fail);
+    img.addEventListener("load", function(){ host.classList.remove("img-missing"); });
+  });
+
+  /* Reveal on scroll */
+  if ("IntersectionObserver" in window) {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if (e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target); } });
+    }, { rootMargin: "0px 0px -8% 0px", threshold: .08 });
+    $$(".reveal").forEach(function(el){ io.observe(el); });
+  } else { $$(".reveal").forEach(function(el){ el.classList.add("in"); }); }
+
+  /* Lightbox */
+  var photos = $$(".g-card").map(function(card){
+    var img = $("img", card);
+    return { src: img.getAttribute("src"), alt: img.getAttribute("alt"), title: $("h3", card).textContent, text: $(".g-body p", card).textContent };
+  });
+  var lb = $("#lightbox"), lbImg = $("#lb-img"), cur = 0, lastFocus = null;
+  function show(i){
+    cur = (i + photos.length) % photos.length;
+    var p = photos[cur];
+    lbImg.src = p.src; lbImg.alt = p.alt;
+    $("#lb-title").textContent = p.title; $("#lb-text").textContent = p.text;
+  }
+  function openLb(i){
+    lastFocus = document.activeElement; show(i);
+    if (typeof lb.showModal === "function") lb.showModal(); else lb.setAttribute("open", "");
+    document.documentElement.style.overflow = "hidden";
+  }
+  function closeLb(){ if (lb.open) { if (lb.close) lb.close(); else lb.removeAttribute("open"); } }
+  lb.addEventListener("close", function(){ document.documentElement.style.overflow = ""; if (lastFocus) lastFocus.focus(); });
+  $$("[data-lb]").forEach(function(b){ b.addEventListener("click", function(){ openLb(+b.getAttribute("data-lb")); }); });
+  $("[data-lb-close]").addEventListener("click", closeLb);
+  $("[data-lb-prev]").addEventListener("click", function(){ show(cur - 1); });
+  $("[data-lb-next]").addEventListener("click", function(){ show(cur + 1); });
+  lb.addEventListener("click", function(e){ if (e.target === lb || e.target.classList.contains("lb-inner")) closeLb(); });
+  document.addEventListener("keydown", function(e){
+    if (!lb.open) return;
+    if (e.key === "ArrowLeft") show(cur - 1);
+    if (e.key === "ArrowRight") show(cur + 1);
+  });
+  var tx = 0;
+  lb.addEventListener("touchstart", function(e){ tx = e.touches[0].clientX; }, { passive: true });
+  lb.addEventListener("touchend", function(e){ var dx = e.changedTouches[0].clientX - tx; if (Math.abs(dx) > 50) show(cur + (dx < 0 ? 1 : -1)); });
+
+  /* Orari: evidenzia oggi e stato aperto/chiuso (ora di Roma) */
+  function romeNow(){
+    try {
+      var parts = new Intl.DateTimeFormat("en-GB", { timeZone: "Europe/Rome", weekday: "short", hour: "2-digit", minute: "2-digit", hour12: false }).formatToParts(new Date());
+      var map = {}; parts.forEach(function(p){ map[p.type] = p.value; });
+      var dows = { Sun:0, Mon:1, Tue:2, Wed:3, Thu:4, Fri:5, Sat:6 };
+      return { dow: dows[map.weekday], min: (+map.hour % 24) * 60 + (+map.minute) };
+    } catch (e) { var d = new Date(); return { dow: d.getDay(), min: d.getHours() * 60 + d.getMinutes() }; }
+  }
+  function toMin(t){ var a = t.split(":"); return (+a[0]) * 60 + (+a[1]); }
+  var now = romeNow(), statusEl = $("#open-status"), openNow = false, nextTxt = "";
+  $$("#hours li").forEach(function(li){
+    var days = li.getAttribute("data-dow").split(",").map(Number);
+    if (days.indexOf(now.dow) === -1) return;
+    li.classList.add("today");
+    var ranges = (li.getAttribute("data-ranges") || "").split(",").filter(Boolean);
+    ranges.forEach(function(r){
+      var ab = r.split("-"), from = toMin(ab[0]), to = toMin(ab[1]);
+      if (now.min >= from && now.min < to) { openNow = true; nextTxt = "fino alle " + ab[1]; }
+      else if (!openNow && !nextTxt && now.min < from) { nextTxt = "apre alle " + ab[0]; }
+    });
+  });
+  if (openNow) { statusEl.classList.add("is-open"); statusEl.textContent = "Aperto ora · " + nextTxt; }
+  else {
+    statusEl.classList.add("is-closed");
+    if (nextTxt) statusEl.textContent = "Chiuso ora · oggi " + nextTxt;
+    else {
+      var NAMES = ["domenica","lunedì","martedì","mercoledì","giovedì","venerdì","sabato"], found = "";
+      for (var k = 1; k <= 7 && !found; k++) {
+        var dd = (now.dow + k) % 7;
+        $$("#hours li").forEach(function(li){
+          if (found) return;
+          var r = (li.getAttribute("data-ranges") || "").split(",").filter(Boolean);
+          if (r.length && li.getAttribute("data-dow").split(",").map(Number).indexOf(dd) !== -1) found = (k === 1 ? "domani" : NAMES[dd]) + " alle " + r[0].split("-")[0];
+        });
+      }
+      statusEl.textContent = found ? "Chiuso ora · riapriamo " + found : "Chiuso ora";
+    }
+  }
+
+  /* Mappa al clic */
+  $("#load-map").addEventListener("click", function(){
+    var ph = $("#map-ph"), f = document.createElement("iframe");
+    f.src = MAP_EMBED; f.title = "Mappa: Da Guidobaldo, Corte Alta, Fossombrone";
+    f.loading = "lazy"; f.referrerPolicy = "no-referrer-when-downgrade"; f.allowFullscreen = true;
+    ph.replaceWith(f);
+  });
+
+  /* ===== Prenotazione WhatsApp ===== */
+  var form = $("#booking-form"), dateEl = $("#date"), timeEl = $("#time");
+  var DAYS = ["domenica","lunedì","martedì","mercoledì","giovedì","venerdì","sabato"];
+  function pad(n){ return (n < 10 ? "0" : "") + n; }
+  function iso(d){ return d.getFullYear() + "-" + pad(d.getMonth() + 1) + "-" + pad(d.getDate()); }
+  function parseISO(s){ var a = s.split("-"); return new Date(+a[0], +a[1] - 1, +a[2]); }
+  var today = new Date(); today.setHours(0,0,0,0);
+  dateEl.min = iso(today);
+  var maxD = new Date(today); maxD.setMonth(maxD.getMonth() + 6); dateEl.max = iso(maxD);
+
+  function slot(){ return $("input[name=slot]:checked", form); }
+  function setErr(id, msg, field){
+    var el = $("#" + id); el.textContent = msg || ""; el.hidden = !msg;
+    if (field) field.setAttribute("aria-invalid", msg ? "true" : "false");
+  }
+  function nextDateFor(dow){
+    var d = new Date(today);
+    while (d.getDay() !== dow) d.setDate(d.getDate() + 1);
+    return d;
+  }
+
+  $$("input[name=slot]", form).forEach(function(r){
+    r.addEventListener("change", function(){
+      setErr("err-slot", "");
+      timeEl.min = r.dataset.from; timeEl.max = r.dataset.to;
+      var dow = +r.dataset.dow;
+      if (!dateEl.value || parseISO(dateEl.value).getDay() !== dow) { dateEl.value = iso(nextDateFor(dow)); }
+      var t = timeEl.value ? toMin(timeEl.value) : -1;
+      if (t < toMin(r.dataset.from) || t > toMin(r.dataset.to)) timeEl.value = r.dataset.default;
+      setErr("err-date", "", dateEl); setErr("err-time", "", timeEl);
+    });
+  });
+
+  dateEl.addEventListener("change", function(){
+    if (!dateEl.value) return;
+    var dow = parseISO(dateEl.value).getDay(), s = slot();
+    if (s && +s.dataset.dow === dow) { setErr("err-date", "", dateEl); return; }
+    var matches = $$("input[name=slot]", form).filter(function(r){ return +r.dataset.dow === dow; });
+    if (matches.length === 1) { matches[0].checked = true; matches[0].dispatchEvent(new Event("change")); return; }
+    if (matches.length > 1) { if (s) s.checked = false; setErr("err-slot", "Di sabato siamo aperti a pranzo e a cena: scegli il turno."); setErr("err-date", "", dateEl); return; }
+    setErr("err-date", "Il " + DAYS[dow] + " siamo chiusi (aperture straordinarie sui social). Scegli venerdì, sabato o domenica.", dateEl);
+  });
+
+  $$("input[name=guests]", form).forEach(function(r){
+    r.addEventListener("change", function(){ $("#guests-more-wrap").hidden = r.value !== "6+" || !r.checked; });
+  });
+  $("#pref-diet").addEventListener("change", function(e){ $("#diet-wrap").hidden = !e.target.checked; if (e.target.checked) $("#diet").focus(); });
+  ["#name", "#privacy"].forEach(function(s){ $(s).addEventListener("input", function(){ setErr("err-" + s.slice(1), "", $(s)); }); });
+
+  function validate(){
+    var ok = true, s = slot(), first = null;
+    function bad(id, msg, field, focusEl){ setErr(id, msg, field); ok = false; if (!first) first = focusEl || field; }
+    setErr("err-slot", ""); setErr("err-date", "", dateEl); setErr("err-time", "", timeEl); setErr("err-name", "", $("#name")); setErr("err-privacy", "", $("#privacy"));
+
+    if (!s) bad("err-slot", "Scegli quando vuoi venire.", null, $("input[name=slot]", form));
+    if (!dateEl.value) bad("err-date", "Indica la data.", dateEl);
+    else {
+      var d = parseISO(dateEl.value);
+      if (d < today) bad("err-date", "La data è già passata.", dateEl);
+      else if (s && d.getDay() !== +s.dataset.dow) bad("err-date", "Questa data non è un " + DAYS[+s.dataset.dow] + ": controlla il turno scelto.", dateEl);
+    }
+    if (!timeEl.value) bad("err-time", "Indica l'orario preferito.", timeEl);
+    else if (s) {
+      var t = toMin(timeEl.value);
+      if (t < toMin(s.dataset.from) || t > toMin(s.dataset.to)) bad("err-time", "Scegli un orario tra le " + s.dataset.from + " e le " + s.dataset.to + ".", timeEl);
+    }
+    var name = $("#name").value.trim();
+    if (name.length < 2) bad("err-name", "Scrivi il tuo nome.", $("#name"));
+    if (!$("#privacy").checked) bad("err-privacy", "Per continuare serve il consenso all'informativa privacy.", $("#privacy"));
+    if (first) first.focus();
+    return ok;
+  }
+
+  function buildMessage(){
+    var s = slot(), d = parseISO(dateEl.value);
+    var dateTxt = d.toLocaleDateString("it-IT", { weekday: "long", day: "numeric", month: "long", year: "numeric" });
+    var g = $("input[name=guests]:checked", form).value;
+    var more = $("#guests-more").value.trim();
+    if (g === "6+" && more) g = more;
+    var prefs = $$("input[name=pref]:checked", form).map(function(p){ return p.value; });
+    var diet = $("#diet").value.trim(), notes = $("#notes").value.trim();
+    var lines = [
+      "Buongiorno Da Guidobaldo, vorrei prenotare un tavolo.",
+      "",
+      "• Turno: " + s.dataset.label,
+      "• Data: " + dateTxt,
+      "• Orario preferito: " + timeEl.value,
+      "• Ospiti: " + g
+    ];
+    if (prefs.length) lines.push("• Preferenze: " + prefs.join(", "));
+    if (diet && $("#pref-diet").checked) lines.push("• Intolleranze / esigenze: " + diet);
+    if (notes) lines.push("• Note: " + notes);
+    lines.push("• Nome: " + $("#name").value.trim(), "", "Grazie, attendo conferma!");
+    return lines.join("\n");
+  }
+
+  form.addEventListener("submit", function(e){
+    e.preventDefault();
+    if (!validate()) return;
+    var url = "https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent(buildMessage());
+    var st = $("#form-status");
+    st.innerHTML = "";
+    st.appendChild(document.createTextNode("Stiamo aprendo WhatsApp con il messaggio già pronto: premi Invia per mandarcelo. Se non si apre, "));
+    var a = document.createElement("a"); a.href = url; a.target = "_blank"; a.rel = "noopener noreferrer"; a.textContent = "tocca qui";
+    st.appendChild(a); st.appendChild(document.createTextNode("."));
+    st.hidden = false;
+    var w = window.open(url, "_blank");
+    if (w) { try { w.opener = null; } catch (err) {} }
+    else { try { window.top.location.href = url; } catch (err) { window.location.href = url; } }
+  });
+})();
+</script>
+</body>
+</html>
